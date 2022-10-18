@@ -13,9 +13,13 @@ import Footer from "./components/Footer";
 
 const App = () => {
   const [firstName, setFirstName] = useState("");
+  const [lastName, setlastName] = useState("");
+  const [email, setEmail] = useState("");
 
   const getSubmittedFormData = (data) => {
     setFirstName(data.firstName);
+    setlastName(data.lastName);
+    setEmail(data.email);
   };
 
   return (
@@ -41,7 +45,7 @@ const App = () => {
           <SignUp receiverFormSubmission={getSubmittedFormData} />
         </Route>
         <Route path="/account">
-          <Account />
+          <Account accountDetails={{ firstName, lastName, email }} />
         </Route>
         <Route path="*">
           <NotFound />
