@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="h-screen p-20 flex flex-col items-start gap-5">
+    <div className="h-screen p-20 flex flex-col items-center gap-10">
       <h2 className="text-4xl font-medium">Page not found</h2>
       <Link to="/" className="btn gap-2">
         <svg
