@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -7,13 +7,20 @@ import Drones from "./components/Drones";
 import Support from "./components/Support";
 import About from "./components/About";
 import SignUp from "./components/SignUp";
+import Account from "./components/Account";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 
 const App = () => {
+  const [firstName, setFirstName] = useState("");
+
+  const getSubmittedFormData = (data) => {
+    setFirstName(data.firstName);
+  };
+
   return (
     <Router>
-      <Navbar />
+      <Navbar firstName={firstName} />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -31,7 +38,10 @@ const App = () => {
           <About />
         </Route>
         <Route path="/signup">
-          <SignUp />
+          <SignUp receiverFormSubmission={getSubmittedFormData} />
+        </Route>
+        <Route path="/account">
+          <Account />
         </Route>
         <Route path="*">
           <NotFound />

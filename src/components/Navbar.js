@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ firstName }) => {
   return (
     <nav className="navbar bg-base-100">
       <div className="navbar-start">
@@ -65,8 +65,11 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/signup" className="btn">
-          Sign up
+        <Link
+          to={firstName ? "/account" : "signup"}
+          className={`btn ${firstName && "bg-cyan-500 border-cyan-500"}`}
+        >
+          {firstName ? `Hello, ${firstName}` : "Sign up"}
         </Link>
       </div>
     </nav>

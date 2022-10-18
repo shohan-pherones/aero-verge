@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const SignUp = () => {
+const SignUp = ({ receiverFormSubmission }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -10,8 +10,10 @@ const SignUp = () => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
-    if (firstName && lastName && email) history.push("/");
-    else setIsWrong("Wrong inputs");
+    if (firstName && lastName && email) {
+      history.push("/");
+      receiverFormSubmission({ firstName, lastName, email });
+    } else setIsWrong("Wrong inputs");
   };
 
   return (
