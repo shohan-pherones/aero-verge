@@ -6,6 +6,7 @@ import Categories from "./components/Categories";
 import Drones from "./components/Drones";
 import Support from "./components/Support";
 import About from "./components/About";
+import SignUp from "./components/SignUp";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 
@@ -28,6 +29,9 @@ const App = () => {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/signup">
+          <SignUp />
         </Route>
         <Route path="*">
           <NotFound />
