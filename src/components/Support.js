@@ -11,7 +11,7 @@ const Support = () => {
   const handleSupportForm = (e) => {
     e.preventDefault();
     if (fullName && email && message) {
-      history.push("/");
+      history.push("/feedback");
     } else {
       setIsWrong("Wrong inputs");
     }

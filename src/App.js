@@ -10,6 +10,7 @@ import SignUp from "./components/SignUp";
 import Account from "./components/Account";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
+import Feedback from "./components/Feedback";
 
 const App = () => {
   const [firstName, setFirstName] = useState("");
@@ -37,6 +38,9 @@ const App = () => {
         </Route>
         <Route path="/support">
           <Support />
+        </Route>
+        <Route path="/feedback">
+          <Feedback />
         </Route>
         <Route path="/about">
           <About />
