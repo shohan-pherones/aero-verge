@@ -10,10 +10,11 @@ const SignUp = ({ receiverFormSubmission }) => {
 
   const handleSignUp = (e) => {
     e.preventDefault();
+
     if (firstName && lastName && email) {
-      history.push("/");
       receiverFormSubmission({ firstName, lastName, email });
-    } else setIsWrong("Wrong inputs");
+      history.push("/");
+    } else setIsWrong("Invalid inputs!");
   };
 
   return (
