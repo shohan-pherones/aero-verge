@@ -3,8 +3,13 @@ import { Link } from "react-router-dom";
 
 const Account = ({ accountDetails }) => {
   const { firstName, lastName, email } = accountDetails;
-  return (
-    <div className="h-screen p-20 flex justify-center items-start">
+  return;
+};
+
+export default Account;
+
+{
+  /* <div className="h-screen p-20 flex justify-center items-start">
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
           <img
@@ -37,8 +42,5 @@ const Account = ({ accountDetails }) => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default Account;
+    </div> */
+}
