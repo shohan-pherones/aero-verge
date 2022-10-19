@@ -1,6 +1,7 @@
 import React from "react";
 import Categories from "./Categories";
 import Drones from "./Drones";
+import FAQ from "./FAQ";
 import Slider from "./Slider";
 
 const Home = ({ data: { drones, isPending, error } }) => {
@@ -9,6 +10,7 @@ const Home = ({ data: { drones, isPending, error } }) => {
       <Slider />
       <Categories />
       <Drones data={{ drones, isPending, error }} />
+      <FAQ />
     </div>
   );
 };
