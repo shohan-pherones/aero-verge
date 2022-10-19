@@ -3,27 +3,16 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <section className="bg-white dark:bg-gray-900 min-h-screen py-20">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div className="mx-auto max-w-screen-sm text-center">
-          <h1 className="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-cyan-600 dark:text-cyan-500">
-            404
-          </h1>
-          <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">
-            Page not found.
-          </p>
-          <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
-            Sorry, we can't find that page. You'll find lots to explore on the
-            home page.{" "}
-          </p>
-          <Link
-            to="/"
-            className="inline-flex text-white bg-cyan-600 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-cyan-900 my-4"
-          >
-            Back to Homepage
-          </Link>
-        </div>
-      </div>
+    <section className="min-h-screen container mx-auto text-center flex flex-col gap-2 py-20">
+      <h2 className="text-8xl font-bold text-primary">404</h2>
+      <h3 className="text-4xl font-semibold">Page not found.</h3>
+      <p>
+        Sorry, we can't find that page. You'll find lots to explore on the home
+        page.
+      </p>
+      <Link to="/" className="btn btn-primary self-center mt-5">
+        Back to home
+      </Link>
     </section>
   );
 };
