@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 
 const Drones = ({ data: { drones, isPending, error } }) => {
   return (
-    <div className="drones-section flex flex-col gap-10 text-center p-20 items-center">
-      <h2 className="text-4xl font-medium">Browse all items</h2>
-      <div className="drones-wrapper  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 items-start text-left">
-        {isPending && (
-          <p className="col-span-2 text-xl">{!error ? "Loading..." : error}</p>
-        )}
+    <section className="container mx-auto py-10 min-h-screen">
+      <h2 className="text-4xl font-semibold text-center mb-10">
+        Browse all products
+      </h2>
+      <div className="card-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10  justify-items-center">
         {drones &&
           drones.map((drone) => (
             <div className="card w-96 bg-base-100 shadow-xl" key={drone.id}>
@@ -17,18 +16,25 @@ const Drones = ({ data: { drones, isPending, error } }) => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title text-2xl">{drone.title}</h2>
-                <p className="text-lg">{`FROM USD $${drone.price}`}</p>
-                <Link
-                  to={`/drone/${drone.id}`}
-                  className="card-actions justify-end"
-                >
-                  <button className="btn btn-primary">Buy Now</button>
-                </Link>
+                <p className="text-xl">
+                  Price:{" "}
+                  <span className="font-semibold text-rose-500">
+                    {drone.price.toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                    })}
+                  </span>
+                </p>
+                <div className="card-actions justify-end">
+                  <Link to={`/drone/${drone.id}`} className="btn btn-primary">
+                    Buy Now
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
       </div>
-    </div>
+    </section>
   );
 };
 

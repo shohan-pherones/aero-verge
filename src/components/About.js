@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section className="container mx-auto py-20 min-h-screen">
+    <section className="container mx-auto py-10 min-h-screen">
       <div className="flex flex-col gap-5">
-        <h2 className="text-4xl font-semibold text-center">
-          About <span className="text-primary">Aero Verge</span>
-        </h2>
+        <h2 className="text-4xl font-semibold text-center">About us</h2>
         <p>
           Buying a drone is not rocket science anymore! Aero Verge is the
           world's first online drone market, with everything you need to know
