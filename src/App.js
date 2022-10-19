@@ -46,7 +46,7 @@ const App = () => {
       <Navbar firstName={firstName} />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Home data={{ drones, isPending, error }} />
         </Route>
         <Route path="/categories">
           <Categories />

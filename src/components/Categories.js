@@ -29,24 +29,27 @@ const Categories = () => {
   ];
 
   return (
-    <div className="  flex items-start gap-10 justify-center py-20 flex-wrap">
-      {categories.map((category) => (
-        <div
-          className="card w-96 bg-base-100 shadow-xl image-full"
-          key={category.id}
-        >
-          <figure>
-            <img src={category.image} alt={category.name} />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title text-3xl">{category.name}</h2>
-            <p>{category.description}</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Explore now</button>
+    <div>
+      <h2 className="text-4xl font-medium text-center">Browse categories</h2>
+      <div className="  flex items-start gap-10 justify-center py-20 pt-10 flex-wrap">
+        {categories.map((category) => (
+          <div
+            className="card w-96 bg-base-100 shadow-xl image-full"
+            key={category.id}
+          >
+            <figure>
+              <img src={category.image} alt={category.name} />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title text-3xl">{category.name}</h2>
+              <p>{category.description}</p>
+              <div className="card-actions justify-end">
+                <button className="btn btn-primary">Explore now</button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
