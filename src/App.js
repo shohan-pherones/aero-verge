@@ -4,13 +4,14 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Categories from "./components/Categories";
 import Drones from "./components/Drones";
+import Drone from "./components/Drone";
 import Support from "./components/Support";
+import Feedback from "./components/Feedback";
 import About from "./components/About";
 import SignUp from "./components/SignUp";
 import Account from "./components/Account";
-import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
-import Feedback from "./components/Feedback";
+import NotFound from "./components/NotFound";
 
 const App = () => {
   const [firstName, setFirstName] = useState("");
@@ -30,7 +31,8 @@ const App = () => {
     setTimeout(() => {
       fetch("http://localhost:8000/dronesArr")
         .then((res) => {
-          if (!res.ok) throw new Error("Something went wrong");
+          if (!res.ok)
+            throw new Error("Something went wrong, please try again later!");
           return res.json();
         })
         .then((data) => {
@@ -53,6 +55,9 @@ const App = () => {
         </Route>
         <Route path="/drones">
           <Drones data={{ drones, isPending, error }} />
+        </Route>
+        <Route path="/drone/:id">
+          <Drone />
         </Route>
         <Route path="/support">
           <Support />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Drones = ({ data: { drones, isPending, error } }) => {
   return (
@@ -17,9 +18,12 @@ const Drones = ({ data: { drones, isPending, error } }) => {
               <div className="card-body">
                 <h2 className="card-title text-2xl">{drone.title}</h2>
                 <p className="text-lg">{`FROM USD $${drone.price}`}</p>
-                <div className="card-actions justify-end">
+                <Link
+                  to={`/drone/${drone.id}`}
+                  className="card-actions justify-end"
+                >
                   <button className="btn btn-primary">Buy Now</button>
-                </div>
+                </Link>
               </div>
             </div>
           ))}
