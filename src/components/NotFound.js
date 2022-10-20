@@ -9,8 +9,8 @@ const NotFound = () => {
         Sorry, we can't find that page. You'll find lots to explore on the home
         page.
       </p>
-      <Link to="/" className="btn btn-primary self-center mt-5">
-        Back to home
+      <Link to="/" className="self-center">
+        <button className="btn btn-primary mt-5">Back to home</button>
       </Link>
     </section>
   );

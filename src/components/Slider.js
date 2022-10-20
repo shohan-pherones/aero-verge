@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 
 const Slider = () => {
   return (
-    <>
+    <div>
       <Swiper
         pagination={{
           type: "progressbar",
@@ -28,7 +28,7 @@ const Slider = () => {
           <img src="https://dji-official-fe.djicdn.com/cms/uploads/249cf2fdd8c448a5125bc83eaa259393.jpg" />
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 
