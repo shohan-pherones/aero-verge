@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section className="container mx-auto py-10 min-h-screen px-10">
+    <section className="container mx-auto py-10 min-h-screen px-5">
       <div className="flex flex-col gap-5">
         <h2 className="text-4xl font-semibold text-center">About us</h2>
         <p>

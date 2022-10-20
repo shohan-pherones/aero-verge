@@ -22,7 +22,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="container mx-auto py-10 px-10">
+    <section className="container mx-auto py-10 px-5">
       <h2 className="text-center text-4xl font-medium mb-10">FAQ</h2>
       <div className=" flex flex-col gap-5">
         {faqs.map((faq) => (
