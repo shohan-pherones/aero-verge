@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -12,6 +12,7 @@ import SignUp from "./components/SignUp";
 import Account from "./components/Account";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
+import Shipment from "./components/Shipment";
 
 const App = () => {
   const [firstName, setFirstName] = useState("");
@@ -58,6 +59,9 @@ const App = () => {
         </Route>
         <Route path="/drone/:id">
           <Drone />
+        </Route>
+        <Route path="/shipment">
+          <Shipment />
         </Route>
         <Route path="/support">
           <Support />

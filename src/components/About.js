@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -22,7 +21,7 @@ const About = () => {
           accessories. Get the best deals on drones from Aero Verge!
         </p>
 
-        <Link to="/" className="btn btn-primary self-center">
+        <Link to="/" className="btn btn-primary self-center mt-3">
           Back to home
         </Link>
       </div>

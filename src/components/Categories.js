@@ -1,5 +1,3 @@
-import React from "react";
-
 const Categories = () => {
   const categories = [
     {
@@ -29,9 +27,11 @@ const Categories = () => {
   ];
 
   return (
-    <div>
-      <h2 className="text-4xl font-medium text-center">Browse categories</h2>
-      <div className="  flex items-start gap-10 justify-center py-20 pt-10 flex-wrap">
+    <section className="container mx-auto py-10 min-h-screen">
+      <h2 className="text-4xl font-semibold text-center mb-10">
+        Explore categories
+      </h2>
+      <div className="categories-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
         {categories.map((category) => (
           <div
             className="card w-96 bg-base-100 shadow-xl image-full"
@@ -41,16 +41,16 @@ const Categories = () => {
               <img src={category.image} alt={category.name} />
             </figure>
             <div className="card-body">
-              <h2 className="card-title text-3xl">{category.name}</h2>
+              <h2 className="card-title">{category.name}</h2>
               <p>{category.description}</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Explore now</button>
+                <button className="btn btn-primary">Explore</button>
               </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

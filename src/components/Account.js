@@ -1,10 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Account = ({ accountDetails }) => {
   const { firstName, lastName, email } = accountDetails;
   return (
-    <section className="container mx-auto min-h-screen py-20">
+    <section className="container mx-auto min-h-screen py-10">
       <div className="card w-96 bg-base-100 shadow-xl mx-auto">
         <figure className="px-10 pt-10">
           <img

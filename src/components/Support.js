@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const Support = () => {
@@ -14,17 +14,13 @@ const Support = () => {
     if (fullName && email && message) {
       history.push("/feedback");
     } else {
-      setIsWrong("Invalid inputs!");
+      setIsWrong("Invalid inputs, please fill out all fields");
     }
   };
 
   return (
-    <section className="container mx-auto text-center min-h-screen py-20">
-      <h2
-        className={`text-4xl font-semibold mb-5 ${isWrong && "text-rose-500"}`}
-      >
-        {!isWrong ? "Need help?" : isWrong}
-      </h2>
+    <section className="container mx-auto text-center min-h-screen py-10">
+      <h2 className="text-4xl font-semibold mb-5">Need help?</h2>
       <div className="form-control w-full max-w-xs mx-auto flex flex-col gap-3">
         <div>
           <label className="label" htmlFor="full-name">
@@ -36,7 +32,9 @@ const Support = () => {
             id="full-name"
             type="text"
             placeholder="Sarah Parker"
-            className="input input-bordered w-full max-w-xs"
+            className={`input input-bordered w-full max-w-xs ${
+              isWrong && "border-rose-500"
+            }`}
           />
         </div>
         <div>
@@ -49,7 +47,9 @@ const Support = () => {
             id="email"
             type="email"
             placeholder="hello@example.com"
-            className="input input-bordered w-full max-w-xs"
+            className={`input input-bordered w-full max-w-xs ${
+              isWrong && "border-rose-500"
+            }`}
           />
         </div>
         <div>
@@ -62,11 +62,14 @@ const Support = () => {
             id="message"
             rows="5"
             placeholder="Write your message"
-            className="textarea textarea-bordered w-full max-w-xs resize-none text-base"
+            className={`textarea textarea-bordered w-full max-w-xs resize-none text-base ${
+              isWrong && "border-rose-500"
+            }`}
           />
         </div>
+        {isWrong && <p className="text-rose-500 mt-3">* {isWrong}</p>}
         <button
-          className="btn btn-primary mt-5"
+          className="btn btn-primary mt-3"
           type="submit"
           onClick={handleSupportForm}
         >

@@ -1,4 +1,3 @@
-import React from "react";
 import Categories from "./Categories";
 import Drones from "./Drones";
 import FAQ from "./FAQ";
