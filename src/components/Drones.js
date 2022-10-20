@@ -15,7 +15,7 @@ const Drones = ({ data: { drones, isPending, error }, name, bypassHeight }) => {
           {!error ? "Loading..." : error}
         </p>
       )}
-      <div className="card-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10  justify-items-center">
+      <div className="card-wrapper grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10  justify-items-center">
         {drones &&
           drones.map((drone) => (
             <div className="card w-96 bg-base-100 shadow-lg" key={drone.id}>

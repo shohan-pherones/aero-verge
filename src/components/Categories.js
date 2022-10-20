@@ -37,7 +37,7 @@ const Categories = ({ bypassHeight }) => {
       <h2 className="text-4xl font-semibold text-center mb-10">
         Explore categories
       </h2>
-      <div className="categories-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+      <div className="categories-wrapper grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 justify-items-center">
         {categories.map((category) => (
           <div
             className="card w-96 bg-base-100 shadow-xl image-full"
