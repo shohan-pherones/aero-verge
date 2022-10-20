@@ -1,7 +1,7 @@
+import Slider from "./Slider";
 import Categories from "./Categories";
 import Drones from "./Drones";
 import FAQ from "./FAQ";
-import Slider from "./Slider";
 
 const Home = ({ data: { drones, isPending, error } }) => {
   return (

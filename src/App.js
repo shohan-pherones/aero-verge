@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Categories from "./components/Categories";
+import Category from "./components/Category";
 import Drones from "./components/Drones";
 import Drone from "./components/Drone";
 import Support from "./components/Support";
@@ -53,6 +54,9 @@ const App = () => {
         </Route>
         <Route path="/categories">
           <Categories />
+        </Route>
+        <Route path="/category/:name">
+          <Category />
         </Route>
         <Route path="/drones">
           <Drones data={{ drones, isPending, error }} />

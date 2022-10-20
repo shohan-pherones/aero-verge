@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-const Drones = ({ data: { drones, isPending, error } }) => {
+const Drones = ({ data: { drones, isPending, error }, name }) => {
   return (
     <section className="container mx-auto py-10 min-h-screen">
       <h2 className="text-4xl font-semibold text-center mb-10">
-        Browse all products
+        {name ? name : "Browse all products"}
       </h2>
       {isPending && (
         <p className={`text-xl text-center ${error && "text-rose-500"}`}>

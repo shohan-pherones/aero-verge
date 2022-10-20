@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 
 const Drone = () => {
   const { id } = useParams();
@@ -8,6 +8,7 @@ const Drone = () => {
   const [error, setError] = useState("");
   const [vat, setVat] = useState("");
   const [shipping, setShipping] = useState("");
+  const history = useHistory();
 
   useEffect(() => {
     setTimeout(() => {
@@ -72,9 +73,9 @@ const Drone = () => {
               </p>
             </div>
             <div className="card-actions justify-end gap-5">
-              <Link to="/drones" className="btn btn-outline">
+              <button onClick={history.goBack} className="btn btn-outline">
                 Go back
-              </Link>
+              </button>
               <Link to="/shipment" className="btn btn-primary">
                 Order now
               </Link>
