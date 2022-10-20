@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Categories = () => {
+const Categories = ({ bypassHeight }) => {
   const categories = [
     {
       id: 1,
@@ -29,7 +29,11 @@ const Categories = () => {
   ];
 
   return (
-    <section className="container mx-auto py-10 min-h-screen">
+    <section
+      className={`container mx-auto py-10  ${
+        bypassHeight ? bypassHeight : "min-h-screen"
+      }`}
+    >
       <h2 className="text-4xl font-semibold text-center mb-10">
         Explore categories
       </h2>

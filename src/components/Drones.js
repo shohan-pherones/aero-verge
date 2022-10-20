@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 
-const Drones = ({ data: { drones, isPending, error }, name }) => {
+const Drones = ({ data: { drones, isPending, error }, name, bypassHeight }) => {
   return (
-    <section className="container mx-auto py-10 min-h-screen">
+    <section
+      className={`container mx-auto py-10  ${
+        bypassHeight ? bypassHeight : "min-h-screen"
+      }`}
+    >
       <h2 className="text-4xl font-semibold text-center mb-10">
         {name ? name : "Browse all products"}
       </h2>

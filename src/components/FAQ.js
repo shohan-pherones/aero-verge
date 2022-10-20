@@ -22,16 +22,16 @@ const FAQ = () => {
   ];
 
   return (
-    <>
-      <h2 className="text-center text-4xl font-medium">FAQ</h2>
-      <div className="container mx-auto flex flex-col gap-5 py-10">
+    <section className="container mx-auto py-10">
+      <h2 className="text-center text-4xl font-medium mb-10">FAQ</h2>
+      <div className=" flex flex-col gap-5">
         {faqs.map((faq) => (
           <div
             tabIndex={0}
             className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
             key={faq.id}
           >
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-lg font-medium">
               {faq.headline}
             </div>
             <div className="collapse-content">
@@ -40,7 +40,7 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

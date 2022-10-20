@@ -4,11 +4,13 @@ import Drones from "./Drones";
 import FAQ from "./FAQ";
 
 const Home = ({ data: { drones, isPending, error } }) => {
+  const height = "h-auto";
+
   return (
     <div>
       <Slider />
-      <Categories />
-      <Drones data={{ drones, isPending, error }} />
+      <Categories bypassHeight={height} />
+      <Drones data={{ drones, isPending, error }} bypassHeight={height} />
       <FAQ />
     </div>
   );
