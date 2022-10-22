@@ -10,7 +10,7 @@ const Category = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch("http://localhost:8000/dronesArr")
+      fetch("https://aero-verge.herokuapp.com/dronesArr")
         .then((res) => {
           if (!res.ok)
             throw new Error("Something went wrong, please try again later!");

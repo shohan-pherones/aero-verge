@@ -10,4 +10,6 @@
 
 ## Live Link: https://aero-verge.netlify.app
 
+## API Endpoint: https://aero-verge.herokuapp.com/dronesArr
+
 ## Thanks for watching this project

@@ -12,7 +12,7 @@ const Drone = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:8000/dronesArr/${id}`)
+      fetch(`https://aero-verge.herokuapp.com/dronesArr/${id}`)
         .then((res) => {
           if (!res.ok) throw new Error("Product not found!");
           return res.json();
